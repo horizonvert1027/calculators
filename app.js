@@ -1,3 +1,13 @@
+//    ,     #_
+//    ~\_  ####_
+//   ~~  \_#####\
+//   ~~     \###|
+//   ~~       \#/ ___  
+//    ~~       V~' '->
+//     ~~~         /
+//       ~~._.   _/
+//          _/ _/
+//        _/m/'
 const express = require('express');
 const path = require('path');
 
@@ -12,6 +22,9 @@ calculators.forEach(route => {
     app.get('/' + route, (req, res) => {
         res.sendFile(path.join(__dirname, route, 'index.html'));
     })
+    app.get('/embed/' + route, (req, res) => {
+        res.sendFile(path.join(__dirname, route, 'index.html'));
+    })    
 });
 
 app.listen(port, () => {
