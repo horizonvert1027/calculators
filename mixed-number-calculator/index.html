@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="dark">
 <head>
     <title>Mixed Number Calculator</title>
     <meta charset="UTF-8" />
@@ -21,9 +21,9 @@
     <script src="./assets/js/all-calculators.js" defer></script>
 </head>
 <body style="background-color: transparent !important; min-height: 0 !important">
-
-<div style="width: 100%;">
-    <div style="width:350px;float:left;padding: 15px;">
+<div class="calculator">
+<div class=" calculator__container calculator__container--main row">
+    <div class="calculator-aside col">
         <div class="calculator-settings">
             <div class="calculator-setting" id="calculator_form">
                 <div class="calculator-settings">
@@ -72,7 +72,8 @@
                 				</label>			</div>
                 		</div>
                 
-                		<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  " >
+                		<script src="./assets/js/helpers.js"></script>
+<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  " >
                 		
 							<button class="button button--icon js-modal-open" data-modal="share">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,13 +92,13 @@
                 			<script type="text/javascript" src="./assets/js/fractions.js"></script>
                 		
                 		
-                			<script type="text/javascript" src="./assets/js/calculator.js"></script>
+                			<script type="text/javascript" src="./assets/js/calculator/mixed-number-calculator/calculator.js"></script>
                 
                 	</div>
                 </div>            </div>
         </div>
     </div>
-    <div style="float:left;padding: 15px; overflow: scroll;">
+    <div class="calculator-main col" id="result-container">
         <div class="calculator-result calculator-result--error col" id="error-box">
         	<div class="row">
         		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,5 +140,6 @@
 <script async src="./assets/js/lib/math.min.js"></script>
 <script defer src="./assets/js/functions.js"></script>
 
+</div>
 </body>
 </html>

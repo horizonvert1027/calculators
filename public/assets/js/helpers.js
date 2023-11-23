@@ -4,7 +4,7 @@ var semestersCount = 1;
 const addButton = document.getElementsByClassName('js-add-button');
 const clearButtons = document.getElementsByClassName('input-field--clear');
 const courses = document.getElementsByClassName('input-field__input');
-addButton[0].addEventListener('click', addSemester);
+addButton?.[0]?.addEventListener('click', addSemester);
 for(let i = 0; i < clearButtons.length; i++){
 	clearButtons[i].addEventListener('click', removeField);
 }

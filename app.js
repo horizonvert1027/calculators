@@ -14,7 +14,18 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-const calculators = ['gpa-calculator', 'bra-size-calculator'];
+const calculators = [
+    'gpa-calculator',
+    'tip-calculator',
+    'bac-calculator',
+    'average-calculator',
+    'mixed-number-calculator',
+    'bra-size-calculator',
+    'mortgage-calculator',
+    'bmi-calculator',
+    'grade-calculator',
+    'percentage-calculator'
+];
 
 app.use(express.static(path.join(__dirname, 'public')));
 

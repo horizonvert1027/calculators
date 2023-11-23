@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="dark">
 <head>
     <title>BAC Calculator</title>
     <meta charset="UTF-8" />
@@ -21,9 +21,9 @@
     <script src="./assets/js/all-calculators.js" defer></script>
 </head>
 <body style="background-color: transparent !important; min-height: 0 !important">
-
-<div style="width: 100%;">
-    <div style="width:350px;float:left;padding: 15px;">
+<div class="calculator">
+<div class=" calculator__container calculator__container--main row">
+    <div class="calculator-aside col">
         <div class="calculator-settings">
             <div class="calculator-setting" id="calculator_form">
                 <div class="calculator-content col">
@@ -380,7 +380,8 @@
                 							</label></div>	</div>
                 		</div>
                 </div>
-                <div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  " >
+                <script src="./assets/js/helpers.js"></script>
+<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  " >
 					<button class="button button--icon js-modal-open" data-modal="share">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M21 6C21 7.65685 19.6569 9 18 9C16.8255 9 15.8087 8.32508 15.3161 7.34193C15.1138 6.93815 15 6.48237 15 6C15 4.34315 16.3431 3 18 3C19.6569 3 21 4.34315 21 6Z" fill="white"></path>
@@ -417,11 +418,11 @@
                 
                 
                 
-                	<script type="text/javascript" src="./assets/js/calculator.js"></script>
+                	<script type="text/javascript" src="./assets/js/calculator/bac-calculator/calculator.js"></script>
             </div>
         </div>
     </div>
-    <div style="float:left;padding: 15px; overflow: scroll;">
+    <div class="calculator-main col" id="result-container">
         <div class="calculator-result calculator-result--error col" id="error-box">
         	<div class="row">
         		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -447,5 +448,6 @@
 <script async src="./assets/js/lib/math.min.js"></script>
 <script defer src="./assets/js/functions.js"></script>
 
+</div>
 </body>
 </html>
