@@ -27,10 +27,11 @@ const calculators = [
     'percentage-calculator'
 ];
 app.use(cors("*"));
+const publicPath = path.resolve(__dirname, 'public', 'assets');
+
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use('/assets', express.static(path.join(__dirname, 'public')));
-app.use('/embed/:name/assets', express.static(path.join(__dirname, 'public')));
-app.use('/:name/assets', express.static(path.join(__dirname, 'public')));
+app.use('/embed/:name/assets', express.static(publicPath));
+app.use('/:name/assets', express.static(publicPath));
 
 calculators.forEach(route => {
     app.get('/' + route, (req, res) => {
