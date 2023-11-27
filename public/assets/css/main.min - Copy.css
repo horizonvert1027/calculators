@@ -2057,7 +2057,7 @@ html.dark .header-lang__select--active {
   border: 0;
   outline: none;
   background: transparent;
-  color: #242335;
+  color: #111827;
   text-decoration: none;
 }
 
@@ -3339,7 +3339,7 @@ html.dark .table-cell--fraction-text {
 }
 
 .result-table {
-  background: #f9fafb;
+  background: #EFF6FF;
   border-collapse: collapse;
   min-width: 100px;
   width: 100%;
@@ -3403,11 +3403,11 @@ html.dark .table-cell--fraction-text {
   border-bottom-right-radius: 0px !important;
 }
 .result-table td {
-  border-color: #f0f0f5;
+  border-color: #DBEAFE;
 }
 .result-table th {
-  background: #f3f7fe;
-  border-color: #DBEAFE;
+  background: #DBEAFE;
+  border-color: #EFF6FF;
 }
 .result-table th.indigo {
   text-transform: uppercase;
@@ -3422,7 +3422,7 @@ html.dark .table-cell--fraction-text {
   font-weight: 400;
 }
 .result-table th.dark {
-  background-color: #dce8fd;
+  background-color: #bfdbfe;
 }
 .result-table tr > *:is(td, th):last-child {
   width: 100%;
@@ -4063,7 +4063,7 @@ html.dark .prime-factorization-calculator td::after {
 
 .calculator-content {
   padding: 32px;
-  background-color: #f3f7fe;
+  background-color: #fff;
   gap: 20px 16px;
 }
 .calculator-content__geometry {
@@ -4098,9 +4098,6 @@ html.dark .calculator-content__geometry path[fill="#7C3AED"] {
 .calculator-content--options {
   padding: 0;
   gap: 0;
-}
-.input-field {
-  background-color: #f9fafb;
 }
 .calculator-content--footer {
   position: relative;
