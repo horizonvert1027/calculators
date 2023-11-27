@@ -10,8 +10,6 @@
 //        _/m/'
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
-const https = require('https');
 const cors =  require('cors');
 const app = express();
 const port = 3000;
@@ -44,17 +42,7 @@ calculators.forEach(route => {
         res.sendFile(path.join(__dirname, route, 'index.html'));
     })    
 });
-const privateKey = fs.readFileSync('key.key', 'utf8');
-const certificate = fs.readFileSync('cert.cert', 'utf8');
-const credentials = { key: privateKey, cert: certificate };
 
-// Create an HTTPS server
-const httpsServer = https.createServer(credentials, app);
-
-// Start the server
-httpsServer.listen(port, () => {
-  console.log(`Server is running on https://localhost:${port}`);
-});
-// app.listen(port, () => {
-//     console.log('Server is running at port 3000');
-// })
+app.listen(port, () => {
+    console.log('Server is running at port 3000');
+})
