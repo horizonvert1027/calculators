@@ -11,8 +11,10 @@
 const express = require('express');
 const path = require('path');
 const cors =  require('cors');
+const https =  require('https');
+const fs =  require('fs');
 const app = express();
-const port = 3000;
+// const port = 3000;
 
 const calculators = [
     'gpa-calculator',
@@ -42,7 +44,18 @@ calculators.forEach(route => {
         res.sendFile(path.join(__dirname, route, 'index.html'));
     })    
 });
+const options = {
+    key: fs.readFileSync('sizecalc.key'),
+    cert: fs.readFileSync('sizecalc.pem'),
+};
+  
+const server = https.createServer(options, app);
 
-app.listen(port, () => {
-    console.log('Server is running at port 3000');
-})
+const PORT = 443;
+
+server.listen(PORT, () => {
+    console.log(`Server running on https://your-ip-address:${PORT}`);
+});
+// app.listen(port, () => {
+//     console.log('Server is running at port 3000');
+// })

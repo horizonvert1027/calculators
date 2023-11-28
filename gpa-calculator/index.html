@@ -568,11 +568,113 @@
 		</div>
 	</div>
 	</span>
+	<div class="color-editor">
+		<label>Text color</label><input type="color" data="text"/>
+		<label>Calculator content</label><input type="color" data="content"/><br />
+		<label>Calculator content bottom</label><input type="color" data="contentBottom"/>
+		<label>Calculator Input</label><input type="color" data="input"/><br />
+		<label>Table header 1</label><input type="color" data="header1"/>
+		<label>Table header 2</label><input type="color" data="header2"/><br />
+		<label>Table body</label><input type="color" data="body"/><br />
+		<button class="button button--primary ml-auto" onclick="download()">Download</button>
+	</div>
 		</div>
 	</div>
 
 </div>
+<style>
+	.color-editor {
+		padding: 1rem;
+	}
+	.color-editor label {
+		display: inline-block;
+		width: 200px;
+		margin-left: 2rem;
+	}
+</style>
+<script>
+	const colors = {
+		text: '#242335',
+		content: '#f3f7fe',
+		contentBottom: '#F9FAFB',
+		input: '#F9FAFB',
+		header1: '#dce8fd',
+		header2: '#f3f7fe',
+		body: '#f9fafb',
+	}
+	function download() {
+		// Create a Blob containing the text
+		const blob = new Blob([JSON.stringify(colors)], { type: 'text/plain' });
 
+		// Create a download link
+		const link = document.createElement('a');
+		link.href = URL.createObjectURL(blob);
+		
+		// Set the download attribute with the desired file name
+		link.download = 'colors.txt';
+
+		// Append the link to the document
+		document.body.appendChild(link);
+
+		// Programmatically trigger the click event on the link
+		link.click();
+
+		// Remove the link from the document
+		document.body.removeChild(link);
+	}
+	function changeColor(name,  value) {
+		const eles = document.querySelectorAll(name);
+		eles.forEach(function (ele) {
+			if (name !== '*') {
+				ele.style.backgroundColor = value;
+			} else {
+				ele.style.color = value;
+
+			}
+		})
+
+	}
+	function handleInputChange(e) {
+		const type = e.target.attributes.data.value;
+		const value = e.target.value;
+		colors[type] = value;
+		switch (type) {
+			case 'text':
+				changeColor('*', value);
+				break;
+			case 'content':
+				changeColor('.calculator-content', value);
+				break;
+			case 'contentBottom':
+				changeColor('.calculator-content--gray', value);
+				break;
+			case 'input':
+				changeColor('.input-field', value);
+				break;
+			case 'header1':
+				changeColor('.result-table th.dark', value);
+				break;
+			case 'header2':
+				changeColor('.result-table th', value);
+				break;
+			case 'body':
+				changeColor('.result-table', value);
+				break;
+		
+			default:
+				break;
+		}
+	}
+	function init() {
+		const colorInputs = document.querySelectorAll('.color-editor input')
+		colorInputs.forEach(function (input) {
+			console.log(input.attributes.data.value)
+			input.value = colors[input.attributes.data.value];
+			input.addEventListener("input", handleInputChange);
+		});
+	}
+	init()
+</script>
 <script async src="./assets/js/lib/math.min.js"></script>
 <script async src="./assets/js/app.js"></script>
 <script defer src="./assets/js/functions.js"></script>
