@@ -56,18 +56,18 @@ calculators.forEach(route => {
         res.sendFile(path.join(__dirname, route, 'index.html'));
     })    
 });
-const options = {
-    key: fs.readFileSync('sizecalc.key'),
-    cert: fs.readFileSync('sizecalc.pem'),
-};
+// const options = {
+//     key: fs.readFileSync('sizecalc.key'),
+//     cert: fs.readFileSync('sizecalc.pem'),
+// };
   
-const server = https.createServer(options, app);
+// const server = https.createServer(options, app);
 
-const PORT = 443;
+// const PORT = 443;
 
-server.listen(port, () => {
-    console.log(`Server running on https://your-ip-address:${PORT}`);
-});
-// app.listen(port, () => {
-//     console.log('Server is running at port 3000');
-// })
+// server.listen(port, () => {
+//     console.log(`Server running on https://your-ip-address:${PORT}`);
+// });
+app.listen(port, () => {
+    console.log('Server is running at port 3000');
+})
