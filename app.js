@@ -34,19 +34,19 @@ const publicPath = path.resolve(__dirname, 'public', 'assets');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/embed/:name/assets', express.static(publicPath));
 app.use('/:name/assets', express.static(publicPath));
-app.use((req, res, next) => {
-    const cfConnectingIP = req.headers['cf-connecting-ip'];
-    const cfIPCountry = req.headers['cf-ipcountry'];
+// app.use((req, res, next) => {
+//     const cfConnectingIP = req.headers['cf-connecting-ip'];
+//     const cfIPCountry = req.headers['cf-ipcountry'];
   
-    // Check if the request is coming from Cloudflare
-    if (cfConnectingIP && cfIPCountry) {
-      // Request is from Cloudflare, proceed with the next middleware
-      next();
-    } else {
-      // Request is not from Cloudflare, return an error or redirect
-      res.status(403).send('Forbidden');
-    }
-});
+//     // Check if the request is coming from Cloudflare
+//     if (cfConnectingIP && cfIPCountry) {
+//       // Request is from Cloudflare, proceed with the next middleware
+//       next();
+//     } else {
+//       // Request is not from Cloudflare, return an error or redirect
+//       res.status(403).send('Forbidden');
+//     }
+// });
 calculators.forEach(route => {
     app.get('/' + route, (req, res) => {
         res.sendFile(path.join(__dirname, route, 'index.html'));
