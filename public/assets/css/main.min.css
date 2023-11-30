@@ -486,7 +486,7 @@ html.dark .input-wrapper--square > .input-field__hint {
 }
 .input__title--work-hours-calculator {
   position: relative;
-  color: #5045E5;
+  color: #336BFF;
 }
 .input--abv {
   max-width: 62px;
@@ -528,7 +528,7 @@ html.dark .input__title {
   color: #D1D5DB;
 }
 html.dark .input__title--work-hours-calculator {
-  color: #5045E5;
+  color: #336BFF;
 }
 
 .system-item-hidden,
@@ -598,7 +598,7 @@ html.dark .input-button:hover {
   color: #374151;
 }
 .checkbox__input:checked + .checkbox__box {
-  background-color: #5045E5;
+  background-color: #336BFF;
 }
 .checkbox__input:checked + .checkbox__box::after {
   left: 22px;
@@ -975,7 +975,7 @@ html.dark .modal-search-item:hover, html.dark .modal-search-item:focus {
 }
 .modal-share__button--active {
   background: #DBEAFE;
-  color: #5045E5;
+  color: #336BFF;
 }
 .modal-share__textarea {
   display: block;
@@ -1069,8 +1069,8 @@ html.dark .modal-share__textarea {
 .button--primary, .button--copy {
   background-color: #336BFF;
   border: 1px solid #336BFF;
-  /* background-color: #5045E5;
-  border: 1px solid #5045E5; */
+  /* background-color: #336BFF;
+  border: 1px solid #336BFF; */
   color: white;
 }
 .button--primary:hover:not(:disabled):not(:active), .button--copy:hover:not(:disabled):not(:active) {
@@ -1175,7 +1175,7 @@ html.dark .button--secondary {
 }
 .calculator-content--basic button:not(.button-switcher).indigo,
 .calculator-content--scientific button:not(.button-switcher).indigo {
-  background-color: #5045E5;
+  background-color: #336BFF;
   color: white;
 }
 .calculator-content--basic button:not(.button-switcher).indigo:hover,
@@ -1214,7 +1214,7 @@ html.dark .button--secondary {
 }
 .calculator-content--basic button:not(.button-switcher).basic-button--active,
 .calculator-content--scientific button:not(.button-switcher).basic-button--active {
-  border-color: #5045E5;
+  border-color: #336BFF;
 }
 .calculator-content--basic button:not(.button-switcher).purple,
 .calculator-content--scientific button:not(.button-switcher).purple {
@@ -1462,10 +1462,10 @@ html.dark .calculator-content--scientific button:not(.button-switcher).basic-but
   background: #EEF2FF;
 }
 .button-switcher--active path[stroke] {
-  stroke: #5045E5;
+  stroke: #336BFF;
 }
 .button-switcher--active path[fill] {
-  fill: #5045E5;
+  fill: #336BFF;
 }
 .button-switcher--active .button-switcher__text {
   color: #312E81;
@@ -1558,20 +1558,20 @@ html.dark .tab-item svg path[stroke] {
   height: 0;
   position: absolute;
   bottom: -1px;
-  background-color: #5045E5;
+  background-color: #336BFF;
 }
 .tab-item--active {
-  color: #5045E5;
+  color: #336BFF;
 }
 .tab-item--active::after {
   height: 2px;
-  background-color: #5045E5;
+  background-color: #336BFF;
 }
 .tab-item--active svg path[fill] {
   fill: #E0E7FF;
 }
 .tab-item--active svg path[stroke] {
-  stroke: #5045E5;
+  stroke: #336BFF;
 }
 html.dark .tab-item--active svg path[fill] {
   fill: #818CF8;
@@ -1589,7 +1589,7 @@ html.dark .tab-item--active svg path[stroke] {
   transition: all 0.15s;
   padding: 6px;
   display: flex;
-  background: #5045E5;
+  background: #336BFF;
   position: relative;
   cursor: pointer;
 }
@@ -1899,7 +1899,7 @@ html.dark .header-popup__button:hover {
   font-weight: 500;
 }
 .header-breadcrumbs__link--text:hover {
-  color: #5045E5;
+  color: #336BFF;
 }
 html.dark .header-breadcrumbs__separate path[fill] {
   fill: #6B7280;
@@ -2514,7 +2514,7 @@ html.dark .calculator-basic__input {
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  color: #5045E5;
+  color: #336BFF;
 }
 .calculators__subtitle {
   font-size: 1.875rem;
@@ -2603,7 +2603,7 @@ html.dark .calculators-category__title {
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: center;
-  color: #5045E5;
+  color: #336BFF;
   transition: 0.15s ease;
 }
 .calculator-category__link:hover {
@@ -2837,7 +2837,7 @@ html.dark .air-datepicker-body--cells.-years- {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #5045E5;
+  background-color: #336BFF;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -2979,8 +2979,8 @@ html.dark .air-datepicker-cell.-day-.-other-month-:hover {
 }
 .timepicker__input:focus {
   border-width: 2px;
-  border-color: #5045E5;
-  color: #5045E5;
+  border-color: #336BFF;
+  color: #336BFF;
 }
 .timepicker__input:focus::-moz-placeholder {
   opacity: 0;
@@ -3054,8 +3054,8 @@ html.dark .timepicker__input::placeholder {
   color: white;
 }
 html.dark .timepicker__input:focus {
-  border-color: #5045E5;
-  color: #5045E5;
+  border-color: #336BFF;
+  color: #336BFF;
 }
 
 .tag {
@@ -3732,7 +3732,7 @@ html.dark .table-progress-list__item {
   left: 40%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: #5045E5;
+  background: #336BFF;
   border-radius: 50%;
   position: absolute;
   border: 2px solid white;
@@ -3972,7 +3972,7 @@ html.dark .result-age .green-cell {
 .result-controls__button {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: #5045E5;
+  color: #336BFF;
 }
 
 .result-legend-items {
@@ -4194,7 +4194,7 @@ html.dark .calculator-content + html.dark .calculator-content, script + html.dar
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.25rem;
-  color: #5045E5;
+  color: #336BFF;
 }
 .calculator-content-head--always {
   pointer-events: none;
@@ -4648,7 +4648,7 @@ html.dark .dice-point {
   pointer-events: none;
 }
 html.dark .fraction-button {
-  background: #5045E5;
+  background: #336BFF;
   outline-color: #4338CA;
   color: white;
 }
@@ -4669,7 +4669,7 @@ html.dark .fraction-button--only {
   z-index: -1;
 }
 .fraction-radio:checked + .fraction-button {
-  outline-color: #5045E5;
+  outline-color: #336BFF;
   z-index: 20;
   position: relative;
 }
@@ -4954,7 +4954,7 @@ html.dark .calculator-about__wrapper {
   list-style: none !important;
 }
 .calculator-about a {
-  color: #5045E5;
+  color: #336BFF;
 }
 .calculator-about a:hover {
   color: #4338CA;
@@ -5233,7 +5233,7 @@ html.dark .calculator-related__text--title {
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  color: #5045E5;
+  color: #336BFF;
 }
 .categories__title {
   font-size: 1.875rem;
@@ -5425,7 +5425,7 @@ html.dark .page-about {
   line-height: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #5045E5;
+  color: #336BFF;
   letter-spacing: 0.025em;
 }
 @media only screen and (min-width: 768px) {
@@ -5471,7 +5471,7 @@ html.dark .page-about {
   color: #6B7280;
 }
 .about a {
-  color: #5045E5;
+  color: #336BFF;
   text-decoration: underline;
   text-underline-offset: 4px;
   transition: 0.15s;
@@ -5557,7 +5557,7 @@ html.dark .about ul li {
   color: #D1D5DB;
 }
 html.dark .about a {
-  color: #5045E5;
+  color: #336BFF;
 }
 html.dark .about h2:not(.about__title) {
   color: white;
@@ -5738,7 +5738,7 @@ html.dark .contacts-address__text {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 800;
-  color: #5045E5;
+  color: #336BFF;
 }
 .not-found__line {
   height: 100px;
@@ -5757,7 +5757,7 @@ html.dark .contacts-address__text {
   line-height: 1.25rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #5045E5;
+  color: #336BFF;
   letter-spacing: 0.025em;
 }
 .not-found__title {
@@ -5783,7 +5783,7 @@ html.dark .contacts-address__text {
   margin-right: auto;
   margin-top: 2.5rem;
   padding: 0.5rem 0.75rem;
-  background: #5045E5;
+  background: #336BFF;
   color: white;
   font-size: 0.875rem;
   line-height: 1.25rem;
