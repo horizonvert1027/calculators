@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" >
+<html lang="en" dir="ltr">
 <head>
-    <title>BMI Calculator</title>
+    <title>Army Body Fat Calculator</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <meta name="description" content="The free Body Mass Index calculator, also known as BMI, computes and classifies BMI for children and adults using data obtained from WHO and CDC.">
+    <meta name="description" content="The Army Body Fat Calculator provides users with an accurate estimate of their body fat percentage using the standards of the U.S. Army.">
     <link rel="preload" href="./assets/fonts/inter-v12-latin-regular.woff2" as="font" crossorigin type="font/woff2">
     <link rel="preload" href="./assets/fonts/inter-v12-latin-500.woff2" as="font" crossorigin type="font/woff2">
     <link rel="preload" href="./assets/fonts/inter-v12-latin-600.woff2" as="font" crossorigin type="font/woff2">
@@ -22,7 +22,6 @@
 </head>
 <body style="background-color: transparent !important; min-height: 0 !important">
 <div class="modal-window" style="opacity: 0; pointer-events: none;">
-
 	<div class="modal-share">
 		<div class="modal-share__container">
 			<div class="modal-share__header">
@@ -33,32 +32,34 @@
 			</div>
 			<div class="modal-share__content modal-share__content--active">
 				<textarea class="modal-share__textarea"
-					id="share-widget"><iframe class="bmi-calculator iframe" src="https://calc.size.ly/embed/bmi-calculator/" frameborder="0" width="100%" style="height:200px;" onload='javascript:(function(e){e.style.height=e.contentWindow.document.body.scrollHeight+15+"px";}(this));' scrolling="no"></iframe><br/><center><a href="https://calc.size.ly/bmi-calculator/" target="_blank" style="text-decoration:none;"><font size="1" color="#000000">https://calc.size.ly/bmi-calculator/</font></a></center></textarea>
-				<div style="padding-top: 15px;color:#336BFF;cursor:pointer;"
-					onclick=" window.open('https://calc.size.ly/embed/bmi-calculator/','BMI Calculator','width=600,height=580,toolbar=no,menubar=no,scrollbars=yes,resizable=yes');return false;"
-					data-cf-modified-b162a31a31ed6880b585a97f->Preview BMI Calculator Widget</div>
+					id="share-widget"><!-- CALCULATOR, LLC at calc.size.ly. Use is granted only if this statement and all links to calc.size.ly are maintained. -->
+		<iframe class="army-body-fat-calculator iframe" src="https://calc.size.ly/embed/army-body-fat-calculator/" frameborder="0" width="100%" style="height:200px;" onload='javascript:(function(e){e.style.height=e.contentWindow.document.body.scrollHeight+15+"px";}(this));'></iframe>
+		<br/><center><a href="https://calc.size.ly/army-body-fat-calculator/" target="_blank" style="text-decoration:none;"><font size="1" color="#000000">https://calc.size.ly/army-body-fat-calculator/</font></a></center></textarea>
+				<div style="padding-top: 15px;color:#5045E5;cursor:pointer;"
+					onclick=" window.open('https://calc.size.ly/embed/army-body-fat-calculator/','Army Body Fat Calculator','width=600,height=580,toolbar=no,menubar=no,scrollbars=yes,resizable=yes');return false;"
+					data-cf-modified-b05eb2827909adbfab8f9ef3->Preview Army Body Fat Calculator Widget</div>
 			</div>
 			<div class="modal-share__content">
 				<textarea class="modal-share__textarea"
-					id="share-url">https://calc.size.ly/bmi-calculator/</textarea>
+					id="share-url">https://calc.size.ly/army-body-fat-calculator/</textarea>
 			</div>
 			<div class="modal-share__content">
 				<textarea class="modal-share__textarea"
-					id="share-text">The free Body Mass Index calculator, also known as BMI, computes and classifies BMI for children and adults using data obtained from WHO and CDC.: https://calc.size.ly/bmi-calculator/</textarea>
+					id="share-text">The Army Body Fat Calculator provides users with an accurate estimate of their body fat percentage using the standards of the U.S. Army.: https://calc.size.ly/army-body-fat-calculator/</textarea>
 			</div>
 			<div class="modal-share__content">
 				<textarea class="modal-share__textarea"
-					id="share-html">&lt;a href="https://calc.size.ly/bmi-calculator/" title="BMI Calculator" target="_blank"&gt;BMI Calculator&lt;/a&gt;</textarea>
+					id="share-html">&lt;a href="https://calc.size.ly/army-body-fat-calculator/" title="Army Body Fat Calculator" target="_blank"&gt;Army Body Fat Calculator&lt;/a&gt;</textarea>
 			</div>
 		</div>
 		<div class="modal-share__footer">
-			<button class="button button--copy"
-				onclick=" copyWidget(this)"
-				data-cf-modified-b162a31a31ed6880b585a97f->Copy to Clipboard</button>
-
+			<button class="button button--copy" onclick=" copyWidget(this)"
+				data-cf-modified-b05eb2827909adbfab8f9ef3->Copy to Clipboard</button>
+	
 		</div>
 	</div>
-</div>	
+</div>
+
 <div class="calculator">
 	<div class=" calculator__container calculator__container--main row">
 		<div class="calculator-aside col">
@@ -99,9 +100,7 @@
 								</div>
 							
 							
-							</label>	</div>
-						<div class="input-wrapper row">
-							<label class="input col">
+							</label>		<label class="input col">
 								<p class="input__title">Height</p>
 								<div class="input-field input-field--height row">
 									<input type="text" class="input-field__input imperial-system-item" id="height_ft" data-target="height" value="5" onchange="updateHeight(this)" />
@@ -114,24 +113,50 @@
 									<span class="input-field__hint metric-system-item">cm</span>
 								</div>
 							</label>
+						</div>
+						<div class="input-wrapper row">
 							<label class="input col ">
-								<p class="input__title">Weight</p>
+								<p class="input__title">Neck</p>
 								<div class="input-field row">
 									
-									<input type="text" class="input-field__input imperial-system-item" id="weight_imperial" data-target="weight" data-formula="value * 2.20462262185" value="176.4" onchange="sysnumconv(this)"  />
-									<span class="input-field__hint imperial-system-item">pounds</span>
+									<input type="text" class="input-field__input imperial-system-item" id="neck_imperial" data-target="neck" data-formula="value * 0.393701" value="19.29" onchange="sysnumconv(this)"  />
+									<span class="input-field__hint imperial-system-item">inches</span>
 							
 									
-									<input type="text" class="input-field__input metric-system-item system-item-hidden" id="weight" data-target="weight" data-formula="value / 2.20462262185" value="80" onchange="sysnumconv(this)"  />
-									<span class="input-field__hint metric-system-item system-item-hidden">kg</span>
+									<input type="text" class="input-field__input metric-system-item system-item-hidden" id="neck" data-target="neck" data-formula="value / 0.393701" value="49" onchange="sysnumconv(this)"  />
+									<span class="input-field__hint metric-system-item system-item-hidden">cm</span>
+								</div>
+							</label>
+							<label class="input col ">
+								<p class="input__title">Waist</p>
+								<div class="input-field row">
+									
+									<input type="text" class="input-field__input imperial-system-item" id="waist_imperial" data-target="waist" data-formula="value * 0.393701" value="37.40" onchange="sysnumconv(this)"  />
+									<span class="input-field__hint imperial-system-item">inches</span>
+							
+									
+									<input type="text" class="input-field__input metric-system-item system-item-hidden" id="waist" data-target="waist" data-formula="value / 0.393701" value="95" onchange="sysnumconv(this)"  />
+									<span class="input-field__hint metric-system-item system-item-hidden">cm</span>
+								</div>
+							</label>
+						</div>
+						<div class="input-wrapper row gender related-item-hidden related-to-gender-female" >
+							<label class="input col ">
+								<p class="input__title">Hip</p>
+								<div class="input-field row">
+									
+									<input type="text" class="input-field__input imperial-system-item" id="hip_imperial" data-target="hip" data-formula="value * 0.393701" value="35.43" onchange="sysnumconv(this)"  />
+									<span class="input-field__hint imperial-system-item">inches</span>
+							
+									
+									<input type="text" class="input-field__input metric-system-item system-item-hidden" id="hip" data-target="hip" data-formula="value / 0.393701" value="90" onchange="sysnumconv(this)"  />
+									<span class="input-field__hint metric-system-item system-item-hidden">cm</span>
 								</div>
 							</label>
 						</div>
 					</div>
 					
-					<!-- <script src="./assets/js/helpers.js"></script> -->
-	<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  " >
-					
+					<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  " >
 						<button class="button button--icon js-modal-open" data-modal="share">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M21 6C21 7.65685 19.6569 9 18 9C16.8255 9 15.8087 8.32508 15.3161 7.34193C15.1138 6.93815 15 6.48237 15 6C15 4.34315 16.3431 3 18 3C19.6569 3 21 4.34315 21 6Z" fill="white"></path>
@@ -140,6 +165,8 @@
 								<path d="M8.68387 13.3419C8.88616 12.9381 9 12.4824 9 12C9 11.5176 8.88616 11.0619 8.68387 10.6581M8.68387 13.3419C8.19134 14.3251 7.17449 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.17449 9 8.19134 9.67492 8.68387 10.6581M8.68387 13.3419L15.3161 16.6581M8.68387 10.6581L15.3161 7.34193M15.3161 7.34193C15.8087 8.32508 16.8255 9 18 9C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6C15 6.48237 15.1138 6.93815 15.3161 7.34193ZM15.3161 16.6581C15.1138 17.0619 15 17.5176 15 18C15 19.6569 16.3431 21 18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C16.8255 15 15.8087 15.6749 15.3161 16.6581Z" stroke="#336BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 							</svg>
 						</button>
+					
+					
 							<button class="system-switcher" onclick="toggleSystem(this)">
 								<div class="system-switcher__circle"></div>
 								<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +194,7 @@
 					
 					
 					
-						<script type="text/javascript" src="./assets/js/calculator/bmi-calculator/calculator.js"></script>
+						<script type="text/javascript" src="./assets/js/calculator/army-body-calculator/calculator.js"></script>
 				</div>
 			</div>
 		</div>
@@ -184,70 +211,83 @@
 				</div>
 				<div class="col" id="error-list">
 				</div>
-			</div>        <span id="calculator_result"><style>
-		@media(min-width: 700px){
-			.table-progress-list__item {
-				position: relative;
-			}
-			.table-progress-list__item.obesity {
-				right: 50px;
-			}
-			.table-progress-list__item.overweight {
-				right: 22px;
-			}
-			.table-progress-list__item.underweight {
-				left: 40px;
-			}
-			.table-progress-list__item.normal {
-				left: 16px;
-			}
-		}
-	</style>
-	<div class="calculator-result col">
-		<p class="table-cell table-cell--dark table-cell--only-title">Body Mass Index</p>
-		<div class="table-cell table-cell--big table-cell--age table-cell--only row">
-			<div class="table-progress-list">
-				<p class="table-progress-list__item underweight">Underweight</p>
-				<p class="table-progress-list__item normal">Normal</p>
-				<p class="table-progress-list__item overweight">Overweight</p>
-				<p class="table-progress-list__item obesity">Obesity</p>
-			</div>
-			<div class="table-progress" style="background: linear-gradient(90deg, #ff8686 0, #ffdd84 16%, #ffdd84 24%, #9cff84 27%, #9cff84 50%, #ffdd86 55%, #ffdd86 70%, #ff8585 75%,  #ff8585 100%);">
-				<div class="table-progress__indicator" style="left: 48.8%;"></div>
+			</div>        <span id="calculator_result"><div class="calculator-result col">
+		<p class="table-cell table-cell--dark table-cell--only-title">YOUR BODY FAT</p>
+		<div class="table-cell table-cell--only row">
+			<div class="col result-age__text">
+				<p id="result" class="semibold">15%</p>
+				<br>
+				<p id="result-description">You meet the Department of Defense goal: 28% body fat for males, and 34% body fat for females.</p>
 			</div>
 		</div>
 		<div class="result-table__wrapper">
 			<table class="result-table">
-				<thead>
+				<thead class="dark">
 					<tr>
-						<th>Body Mass Index (BMI)</td>
-						<td class="semibold" id="bmi-value">24.2 kg/m<sup>2</sup></td>
+						<th class="dark indigo" colspan="3">MAX. ALLOWABLE BODY FAT PERCENTAGE TO JOIN</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>BMI Category</td>
-						<td id="bmi-category">Healthy weight</td>
+						<td class="semibold result-table__cell--header">Age</td>
+						<td class="short semibold result-table__cell--header">Male</td>
+						<td class="short semibold result-table__cell--header">Female</td>
 					</tr>
 					<tr>
-						<th>Healthy BMI range</td>
-						<td id="bmi-range">18.5 kg/m<sup>2</sup> - 25 kg/m<sup>2</sup></td>
+						<td>17-20</td>
+						<td class="short">24%</td>
+						<td class="short">30%</td>
 					</tr>
 					<tr>
-						<th>Healthy weight for the height</td>
-						<td id="weight-range">135.1 lbs - 182.6 lbs</td>
+						<td>21-27</td>
+						<td class="short">26%</td>
+						<td class="short">32%</td>
 					</tr>
 					<tr>
-						<th id="weight-gain-label">Gain to reach a BMI of 18.5 kg/m<sup>2</sup></td>
-						<td id="weight-gain">-</td>
+						<td>28-39</td>
+						<td class="short">28%</td>
+						<td class="short">34%</td>
 					</tr>
 					<tr>
-						<th id="weight-lose-label">Lose to reach a BMI of 25 kg/m<sup>2</sup></td>
-						<td id="weight-lose">-</td>
+						<td>40 and over</td>
+						<td class="short">30%</td>
+						<td class="short">36%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="result-table__wrapper">
+			<table class="result-table">
+				<thead class="dark">
+					<tr>
+						<th class="dark indigo" colspan="3">MAX. BODY FAT PERCENTAGE STANDARD AFTER ENTRY</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="semibold">Age</th>
+						<th class="short semibold">Male</th>
+						<th class="short semibold">Female</th>
 					</tr>
 					<tr>
-						<th>Ponderal Index</td>
-						<td id="ponderal-index">13.27 kg/m<sup>3</sup></td>
+						<td>17-20</td>
+						<td class="short">20%</td>
+						<td class="short">30%</td>
+					</tr>
+					<tr>
+						<td>21-27</td>
+						<td class="short">22%</td>
+						<td class="short">32%</td>
+					</tr>
+					<tr>
+						<td>28-39</td>
+						<td class="short">24%</td>
+						<td class="short">34%</td>
+					</tr>
+					<tr>
+						<td>40 and over</td>
+						<td class="short">26%</td>
+						<td class="short">36%</td>
 					</tr>
 				</tbody>
 			</table>
@@ -257,10 +297,10 @@
 		</div>
 	</div>
 
-	<script async src="./assets/js/lib/math.min.js"></script>
-	<script defer src="./assets/js/app.js"></script>
+</div>
+<script async src="./assets/js/lib/math.min.js"></script>
+<script async src="./assets/js/app.js"></script>
 <script defer src="./assets/js/functions.js"></script>
 
-</div>
 </body>
 </html>

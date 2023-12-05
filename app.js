@@ -26,7 +26,27 @@ const calculators = [
     'mortgage-calculator',
     'bmi-calculator',
     'grade-calculator',
-    'percentage-calculator'
+    'percentage-calculator',
+    // 'army-body-fat-calculator',
+    // 'auto-loan-calculator',
+    // 'body-fat-percentage-calculator',
+    // 'decimal-to-fraction-calculator',
+    // 'density-calculator',
+    // 'gcf-calculator',
+    // 'lcm-calculator',
+    // 'loan-calculator',
+    // 'mean-calculator',
+    // 'mean-median-mode-calculator',
+    // 'period-calculator',
+    // 'permutation-calculator',
+    // 'quartile-calculator',
+    // 'rounding-calculator',
+    // 'scientific-notation-calculator',
+    // 'sig-fig-calculator',
+    // 'significant-figures-calculator',
+    // 'standard-form-calculator',
+    // 'time-duration-calculator',
+    // 'variance-calculator'
 ];
 app.use(cors("*"));
 const publicPath = path.resolve(__dirname, 'public', 'assets');
@@ -34,19 +54,7 @@ const publicPath = path.resolve(__dirname, 'public', 'assets');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/embed/:name/assets', express.static(publicPath));
 app.use('/:name/assets', express.static(publicPath));
-// app.use((req, res, next) => {
-//     const cfConnectingIP = req.headers['cf-connecting-ip'];
-//     const cfIPCountry = req.headers['cf-ipcountry'];
-  
-//     // Check if the request is coming from Cloudflare
-//     if (cfConnectingIP && cfIPCountry) {
-//       // Request is from Cloudflare, proceed with the next middleware
-//       next();
-//     } else {
-//       // Request is not from Cloudflare, return an error or redirect
-//       res.status(403).send('Forbidden');
-//     }
-// });
+
 calculators.forEach(route => {
     app.get('/' + route, (req, res) => {
         res.sendFile(path.join(__dirname, route, 'index.html'));
@@ -56,18 +64,7 @@ calculators.forEach(route => {
         res.sendFile(path.join(__dirname, route, 'index.html'));
     })    
 });
-// const options = {
-//     key: fs.readFileSync('sizecalc.key'),
-//     cert: fs.readFileSync('sizecalc.pem'),
-// };
-  
-// const server = https.createServer(options, app);
 
-// const PORT = 443;
-
-// server.listen(port, () => {
-//     console.log(`Server running on https://your-ip-address:${PORT}`);
-// });
 app.listen(port, () => {
     console.log('Server is running at port 3000');
 })

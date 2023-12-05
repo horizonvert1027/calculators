@@ -57,15 +57,6 @@
 	</div>	
 </div>
 <div class="calculator">
-	<!-- <div class="container calculator__container calculator__container--title row">
-		<div class="calculator__logo">
-			<img src="/gpa-calculator/assets/images/icon-96.png" alt="GPA Calculator Logo">
-		</div>
-		<div class="calculator__info col">
-			<h1 class="calculator__title">GPA Calculator</h1>
-			<p class="calculator__subtitle">This GPA calculator computes your GPA and creates a report based on your course credits and grade. Both numerical and letter grades are accepted.</p>
-		</div>
-	</div>	 -->
 	<div class=" calculator__container calculator__container--main row">
 		<div class="calculator-aside col">
 			<div class="calculator-settings">
@@ -493,12 +484,13 @@
 					<script src="./assets/js/calculator/gpa-calculator/helpers.js"></script>
 					
 					<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  ">
+						<div class="calculator-content calculator-content--gray calculator-content--footer calculator-content--small row  " >
 						<button class="button button--icon js-modal-open" data-modal="share">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M21 6C21 7.65685 19.6569 9 18 9C16.8255 9 15.8087 8.32508 15.3161 7.34193C15.1138 6.93815 15 6.48237 15 6C15 4.34315 16.3431 3 18 3C19.6569 3 21 4.34315 21 6Z" fill="white"></path>
 								<path d="M21 18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18C15 17.5176 15.1138 17.0619 15.3161 16.6581C15.8087 15.6749 16.8255 15 18 15C19.6569 15 21 16.3431 21 18Z" fill="white"></path>
 								<path d="M9 12C9 12.4824 8.88616 12.9381 8.68387 13.3419C8.19134 14.3251 7.17449 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.17449 9 8.19134 9.67492 8.68387 10.6581C8.88616 11.0619 9 11.5176 9 12Z" fill="white"></path>
-								<path d="M8.68387 13.3419C8.88616 12.9381 9 12.4824 9 12C9 11.5176 8.88616 11.0619 8.68387 10.6581M8.68387 13.3419C8.19134 14.3251 7.17449 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.17449 9 8.19134 9.67492 8.68387 10.6581M8.68387 13.3419L15.3161 16.6581M8.68387 10.6581L15.3161 7.34193M15.3161 7.34193C15.8087 8.32508 16.8255 9 18 9C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6C15 6.48237 15.1138 6.93815 15.3161 7.34193ZM15.3161 16.6581C15.1138 17.0619 15 17.5176 15 18C15 19.6569 16.3431 21 18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C16.8255 15 15.8087 15.6749 15.3161 16.6581Z" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M8.68387 13.3419C8.88616 12.9381 9 12.4824 9 12C9 11.5176 8.88616 11.0619 8.68387 10.6581M8.68387 13.3419C8.19134 14.3251 7.17449 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C7.17449 9 8.19134 9.67492 8.68387 10.6581M8.68387 13.3419L15.3161 16.6581M8.68387 10.6581L15.3161 7.34193M15.3161 7.34193C15.8087 8.32508 16.8255 9 18 9C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6C15 6.48237 15.1138 6.93815 15.3161 7.34193ZM15.3161 16.6581C15.1138 17.0619 15 17.5176 15 18C15 19.6569 16.3431 21 18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C16.8255 15 15.8087 15.6749 15.3161 16.6581Z" stroke="#336BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 							</svg>
 						</button>
 						<button class="button button--primary ml-auto" onclick="calculate(this)">Calculate</button>
@@ -568,113 +560,11 @@
 		</div>
 	</div>
 	</span>
-	<!-- <div class="color-editor">
-		<label>Text color</label><input type="color" data="text"/>
-		<label>Calculator content</label><input type="color" data="content"/><br />
-		<label>Calculator content bottom</label><input type="color" data="contentBottom"/>
-		<label>Calculator Input</label><input type="color" data="input"/><br />
-		<label>Table header 1</label><input type="color" data="header1"/>
-		<label>Table header 2</label><input type="color" data="header2"/><br />
-		<label>Table body</label><input type="color" data="body"/><br />
-		<button class="button button--primary ml-auto" onclick="download()">Download</button>
-	</div> -->
 		</div>
 	</div>
 
 </div>
-<!-- <style>
-	.color-editor {
-		padding: 1rem;
-	}
-	.color-editor label {
-		display: inline-block;
-		width: 200px;
-		margin-left: 2rem;
-	}
-</style>
-<script>
-	const colors = {
-		text: '#242335',
-		content: '#f3f7fe',
-		contentBottom: '#F9FAFB',
-		input: '#F9FAFB',
-		header1: '#dce8fd',
-		header2: '#f3f7fe',
-		body: '#f9fafb',
-	}
-	function download() {
-		// Create a Blob containing the text
-		const blob = new Blob([JSON.stringify(colors)], { type: 'text/plain' });
 
-		// Create a download link
-		const link = document.createElement('a');
-		link.href = URL.createObjectURL(blob);
-		
-		// Set the download attribute with the desired file name
-		link.download = 'colors.txt';
-
-		// Append the link to the document
-		document.body.appendChild(link);
-
-		// Programmatically trigger the click event on the link
-		link.click();
-
-		// Remove the link from the document
-		document.body.removeChild(link);
-	}
-	function changeColor(name,  value) {
-		const eles = document.querySelectorAll(name);
-		eles.forEach(function (ele) {
-			if (name !== '*') {
-				ele.style.backgroundColor = value;
-			} else {
-				ele.style.color = value;
-
-			}
-		})
-
-	}
-	function handleInputChange(e) {
-		const type = e.target.attributes.data.value;
-		const value = e.target.value;
-		colors[type] = value;
-		switch (type) {
-			case 'text':
-				changeColor('*', value);
-				break;
-			case 'content':
-				changeColor('.calculator-content', value);
-				break;
-			case 'contentBottom':
-				changeColor('.calculator-content--gray', value);
-				break;
-			case 'input':
-				changeColor('.input-field', value);
-				break;
-			case 'header1':
-				changeColor('.result-table th.dark', value);
-				break;
-			case 'header2':
-				changeColor('.result-table th', value);
-				break;
-			case 'body':
-				changeColor('.result-table', value);
-				break;
-		
-			default:
-				break;
-		}
-	}
-	function init() {
-		const colorInputs = document.querySelectorAll('.color-editor input')
-		colorInputs.forEach(function (input) {
-			console.log(input.attributes.data.value)
-			input.value = colors[input.attributes.data.value];
-			input.addEventListener("input", handleInputChange);
-		});
-	}
-	init()
-</script> -->
 <script async src="./assets/js/lib/math.min.js"></script>
 <script async src="./assets/js/app.js"></script>
 <script defer src="./assets/js/functions.js"></script>
