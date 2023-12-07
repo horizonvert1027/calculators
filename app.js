@@ -35,18 +35,18 @@ const calculators = [
     'gcf-calculator',
     'lcm-calculator',
     'loan-calculator',
-    'mean-calculator',
-    'mean-median-mode-calculator',
-    'period-calculator',
     'permutation-calculator',
     'quartile-calculator',
     'rounding-calculator',
-    // 'scientific-notation-calculator',
-    // 'sig-fig-calculator',
-    // 'significant-figures-calculator',
-    // 'standard-form-calculator',
-    // 'time-duration-calculator',
-    // 'variance-calculator'
+    'mean-calculator',
+    'mean-median-mode-calculator',
+    'period-calculator',
+    'scientific-notation-calculator',
+    'sig-fig-calculator',
+    'significant-figures-calculator',
+    'standard-form-calculator',
+    'time-duration-calculator',
+    'variance-calculator'
 ];
 app.use(cors("*"));
 const publicPath = path.resolve(__dirname, 'public', 'assets');
