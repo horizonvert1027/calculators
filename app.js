@@ -46,7 +46,8 @@ const calculators = [
     'significant-figures-calculator',
     'standard-form-calculator',
     'time-duration-calculator',
-    'variance-calculator'
+    'variance-calculator',
+    'roman-numeral-converter'
 ];
 app.use(cors("*"));
 const publicPath = path.resolve(__dirname, 'public', 'assets');
