@@ -1468,7 +1468,7 @@ html.dark .calculator-content--scientific button:not(.button-switcher).basic-but
   fill: #5045E5;
 }
 .button-switcher--active .button-switcher__text {
-  color: #312E81;
+  color: #336BFF;
 }
 .button-switcher--top {
   border-bottom-left-radius: 0 !important;
@@ -3285,7 +3285,7 @@ html.dark .calculator-error__item::before {
 }
 .table-cell--only-title {
   text-transform: uppercase;
-  color: #312E81;
+  color: #336BFF;
   letter-spacing: 0.05em;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -3411,7 +3411,7 @@ html.dark .table-cell--fraction-text {
 }
 .result-table th.indigo {
   text-transform: uppercase;
-  color: #312E81;
+  color: #336BFF;
   letter-spacing: 0.05em;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -3608,7 +3608,7 @@ html[dir=rtl] .result-table__wrapper:last-child table tbody:last-child tr:last-c
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 500;
-  color: #312E81;
+  color: #336BFF;
 }
 .result-table--work-hours-calculator {
   border-top: 1px solid #DBEAFE;
