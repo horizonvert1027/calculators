@@ -2,7 +2,7 @@
 'use strict'
 let switchTheme = null;
 
-import("./assets/js/lib/chartjs/chart.js").then((e) => {
+import("/assets/js/lib/chartjs/chart.js").then((e) => {
 	let Chart = e.Chart
 	let registerables = e.registerables
 	Chart.register(...registerables)
